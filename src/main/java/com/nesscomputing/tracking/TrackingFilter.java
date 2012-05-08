@@ -19,6 +19,7 @@ package com.nesscomputing.tracking;
 import java.io.IOException;
 import java.util.UUID;
 
+import javax.annotation.Nonnull;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -71,7 +72,7 @@ public class TrackingFilter implements Filter
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException
+    public void doFilter(@Nonnull ServletRequest request, @Nonnull ServletResponse response, @Nonnull FilterChain chain) throws IOException, ServletException
     {
         final HttpServletRequest req = (HttpServletRequest) request;
         final HttpServletResponse res = (HttpServletResponse) response;
@@ -85,12 +86,8 @@ public class TrackingFilter implements Filter
                 trackingToken.setValue(trackingUUID);
 
                 if (trackingUUID != null) {
-                    if (request != null) {
-                        request.setAttribute(X_NESS_TRACK, trackingUUID);
-                    }
-                    if (res != null) {
-                        res.setHeader(X_NESS_TRACK, trackingUUID.toString());
-                    }
+                    request.setAttribute(X_NESS_TRACK, trackingUUID);
+                    res.setHeader(X_NESS_TRACK, trackingUUID.toString());
                 }
             }
         }
