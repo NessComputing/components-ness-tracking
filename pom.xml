@@ -18,7 +18,7 @@
   <groupId>com.nesscomputing.components</groupId>
   <artifactId>ness-tracking</artifactId>
   <name>ness-tracking</name>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <description>Ness Tracking component. Contains the logic to offer tracing and tracking through the Ness Platform.</description>
 
