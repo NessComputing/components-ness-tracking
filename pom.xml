@@ -18,13 +18,12 @@
   <groupId>com.nesscomputing.components</groupId>
   <artifactId>ness-tracking</artifactId>
   <name>ness-tracking</name>
-  <version>1.0.3-SNAPSHOT</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <description>Ness Tracking component. Contains the logic to offer tracing and tracking through the Ness Platform.</description>
 
   <properties>
     <ness.dep.jackson.version>1.9.7</ness.dep.jackson.version>
-    <ness.dep.jersey.version>1.12</ness.dep.jersey.version>
     <ness.dep.jetty.version>8.1.3.v20120416</ness.dep.jetty.version>
   </properties>
 
@@ -62,11 +61,6 @@
     </dependency>
 
     <dependency>
-      <groupId>com.google.inject.extensions</groupId>
-      <artifactId>guice-multibindings</artifactId>
-    </dependency>
-
-    <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
     </dependency>
@@ -79,12 +73,6 @@
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
       <artifactId>jsr305</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-mapper-asl</artifactId>
-      <version>${ness.dep.jackson.version}</version>
     </dependency>
 
     <dependency>
@@ -103,18 +91,6 @@
       <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-scopes</artifactId>
       <version>1.0.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-server</artifactId>
-      <version>${ness.dep.jersey.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.sun.jersey</groupId>
-      <artifactId>jersey-core</artifactId>
-      <version>${ness.dep.jersey.version}</version>
     </dependency>
 
     <dependency>
