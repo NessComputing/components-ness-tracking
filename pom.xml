@@ -13,13 +13,13 @@
     <connection>scm:git:git://github.com/NessComputing/components-ness-tracking.git</connection>
     <developerConnection>scm:git:git@github.com:NessComputing/components-ness-tracking.git</developerConnection>
     <url>http://github.com/NessComputing/components-ness-tracking</url>
-    <tag>ness-tracking-1.1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <groupId>com.nesscomputing.components</groupId>
   <artifactId>ness-tracking</artifactId>
   <name>ness-tracking</name>
-  <version>1.1.0</version>
+  <version>1.1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <description>Ness Tracking component. Contains the logic to offer tracing and tracking through the Ness Platform.</description>
 
