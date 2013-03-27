@@ -18,7 +18,9 @@ package com.nesscomputing.tracking.guice;
 
 import com.google.inject.Scopes;
 import com.google.inject.servlet.ServletModule;
+
 import com.nesscomputing.config.ConfigProvider;
+import com.nesscomputing.httpclient.HttpClientObserverGroup;
 import com.nesscomputing.httpclient.guice.HttpClientModule;
 import com.nesscomputing.scopes.threaddelegate.ThreadDelegatedScope;
 import com.nesscomputing.scopes.threaddelegate.ThreadDelegatedScopeModule;
@@ -64,7 +66,7 @@ public class TrackingModule extends ServletModule
         bind(TrackingToken.class).in(ThreadDelegatedScope.SCOPE);
 
         // Hook up tracking token to the HttpClient.
-        HttpClientModule.bindNewObserver(binder()).to(HttpClientTrackingObserver.class);
+        HttpClientModule.bindNewObserver(binder(), HttpClientObserverGroup.PLATFORM_INTERNAL).to(HttpClientTrackingObserver.class);
 
         bind(TrackingFilter.class).in(Scopes.SINGLETON);
         filter(pattern).through(TrackingFilter.class);
