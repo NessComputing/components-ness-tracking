@@ -58,6 +58,8 @@ public class TrackingToken implements ScopeListener
             case LEAVE:
                 MDC.remove(MDC_TRACKING_KEY);
                 break;
+            default:
+                throw new IllegalStateException("Unknown Event: " + event);
         }
     }
 }
