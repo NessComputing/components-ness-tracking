@@ -18,7 +18,6 @@ package com.nesscomputing.tracking.executor;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 
-import com.nesscomputing.scopes.threaddelegate.ThreadDelegated;
 import com.nesscomputing.scopes.threaddelegate.concurrent.ThreadDelegatingDecorator;
 
 /**
@@ -38,22 +37,22 @@ import com.nesscomputing.scopes.threaddelegate.concurrent.ThreadDelegatingDecora
 @Deprecated
 public class TrackedExecutors
 {
-	/** Wrap an {@link Executor} to forward the tracking token. */
-	public Executor wrap(Executor wrapped) {
-		return ThreadDelegatingDecorator.wrapExecutor(wrapped);
-	}
-
-	/** Wrap an {@link ExecutorService} to forward the tracking token. */
-	public ExecutorService wrap(ExecutorService wrapped) {
-        return ThreadDelegatingDecorator.wrapExecutorService(wrapped);
-	}
-
-	/** Wrap an {@link Executor} to forward the tracking token. */
-	public static Executor of(Executor wrapped) {
+    /** Wrap an {@link Executor} to forward the tracking token. */
+    public Executor wrap(Executor wrapped) {
         return ThreadDelegatingDecorator.wrapExecutor(wrapped);
-	}
-	/** Wrap an {@link ExecutorService} to forward the tracking token. */
-	public static ExecutorService of(ExecutorService wrapped) {
+    }
+
+    /** Wrap an {@link ExecutorService} to forward the tracking token. */
+    public ExecutorService wrap(ExecutorService wrapped) {
         return ThreadDelegatingDecorator.wrapExecutorService(wrapped);
-	}
+    }
+
+    /** Wrap an {@link Executor} to forward the tracking token. */
+    public static Executor of(Executor wrapped) {
+        return ThreadDelegatingDecorator.wrapExecutor(wrapped);
+    }
+    /** Wrap an {@link ExecutorService} to forward the tracking token. */
+    public static ExecutorService of(ExecutorService wrapped) {
+        return ThreadDelegatingDecorator.wrapExecutorService(wrapped);
+    }
 }
