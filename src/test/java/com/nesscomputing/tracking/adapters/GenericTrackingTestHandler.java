@@ -30,14 +30,13 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.eclipse.jetty.server.Request;
-import org.eclipse.jetty.server.handler.AbstractHandler;
-
 import com.nesscomputing.httpclient.internal.HttpClientHeader;
 import com.nesscomputing.logging.Log;
 import com.nesscomputing.tracking.TrackingUUIDProvider;
-import com.nesscomputing.tracking.adapters.ServletApiAdapter;
 import com.nesscomputing.tracking.config.TrackingConfig;
+
+import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.handler.AbstractHandler;
 
 
 public class GenericTrackingTestHandler extends AbstractHandler

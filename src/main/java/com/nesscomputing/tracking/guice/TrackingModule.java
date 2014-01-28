@@ -23,8 +23,6 @@ import com.nesscomputing.config.ConfigProvider;
 import com.nesscomputing.httpclient.HttpClientObserverGroup;
 import com.nesscomputing.httpclient.guice.HttpClientModule;
 import com.nesscomputing.scopes.threaddelegate.ThreadDelegatedScope;
-import com.nesscomputing.scopes.threaddelegate.ThreadDelegatedScopeModule;
-import com.nesscomputing.scopes.threaddelegate.servlet.ThreadDelegatingScopeFilter;
 import com.nesscomputing.tracking.TrackingFilter;
 import com.nesscomputing.tracking.TrackingToken;
 import com.nesscomputing.tracking.TrackingUUIDProvider;
@@ -37,7 +35,7 @@ import com.nesscomputing.tracking.config.TrackingConfig;
  */
 public class TrackingModule extends ServletModule
 {
-	private final String pattern;
+    private final String pattern;
 
     /**
      * Track all requests.
@@ -52,7 +50,7 @@ public class TrackingModule extends ServletModule
      */
     public TrackingModule(final String pattern)
     {
-    	this.pattern = pattern;
+        this.pattern = pattern;
     }
 
     @Override

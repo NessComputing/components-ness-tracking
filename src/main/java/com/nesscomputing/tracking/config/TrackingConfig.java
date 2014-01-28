@@ -68,6 +68,6 @@ public class TrackingConfig
     @Default("100")
     public int maxRequestBranchesTracked()
     {
-    	return 100;
+        return 100;
     }
 }

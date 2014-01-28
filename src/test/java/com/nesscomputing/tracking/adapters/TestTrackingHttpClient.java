@@ -15,17 +15,17 @@
  */
 package com.nesscomputing.tracking.adapters;
 
-import org.junit.Assert;
-import org.junit.Before;
-
 import com.google.common.collect.ImmutableSet;
+
 import com.nesscomputing.httpclient.HttpClient;
 import com.nesscomputing.httpclient.HttpClientDefaults;
 import com.nesscomputing.httpclient.HttpClientRequest;
 import com.nesscomputing.httpserver.testing.LocalHttpService;
-import com.nesscomputing.testing.lessio.AllowNetworkAccess;
-import com.nesscomputing.testing.lessio.AllowNetworkListen;
-import com.nesscomputing.tracking.adapters.HttpClientTrackingObserver;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.kitei.testing.lessio.AllowNetworkAccess;
+import org.kitei.testing.lessio.AllowNetworkListen;
 
 @AllowNetworkListen(ports={0})
 @AllowNetworkAccess(endpoints={"127.0.0.1:*"})

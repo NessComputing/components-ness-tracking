@@ -23,23 +23,23 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
 import com.google.common.collect.ImmutableSet;
 import com.google.inject.Provider;
+
 import com.nesscomputing.httpclient.HttpClient;
 import com.nesscomputing.httpclient.HttpClientDefaultAuthProvider;
 import com.nesscomputing.httpclient.HttpClientDefaults;
 import com.nesscomputing.httpclient.HttpClientResponseHandler;
 import com.nesscomputing.httpclient.response.ContentResponseHandler;
 import com.nesscomputing.httpserver.testing.LocalHttpService;
-import com.nesscomputing.testing.lessio.AllowNetworkAccess;
-import com.nesscomputing.testing.lessio.AllowNetworkListen;
 import com.nesscomputing.tracking.TrackingToken;
-import com.nesscomputing.tracking.adapters.HttpClientTrackingObserver;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.kitei.testing.lessio.AllowNetworkAccess;
+import org.kitei.testing.lessio.AllowNetworkListen;
 
 
 @AllowNetworkListen(ports={0})

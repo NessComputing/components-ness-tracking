@@ -19,6 +19,7 @@ package com.nesscomputing.tracking.adapters;
 import java.util.UUID;
 
 import com.google.inject.Provider;
+
 import com.nesscomputing.tracking.TrackingToken;
 
 public class DummyTokenProvider implements Provider<TrackingToken>
