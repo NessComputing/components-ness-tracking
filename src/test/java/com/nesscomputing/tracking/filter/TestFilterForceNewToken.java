@@ -28,12 +28,12 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
+import com.nesscomputing.config.Config;
+import com.nesscomputing.tracking.TrackingFilter;
+
 import org.easymock.EasyMock;
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.nesscomputing.config.Config;
-import com.nesscomputing.tracking.TrackingFilter;
 
 public class TestFilterForceNewToken extends AbstractTestTrackingFilter
 {

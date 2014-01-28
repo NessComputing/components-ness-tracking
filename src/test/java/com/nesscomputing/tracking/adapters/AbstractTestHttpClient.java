@@ -21,18 +21,18 @@ import static org.hamcrest.CoreMatchers.nullValue;
 import java.io.IOException;
 import java.util.UUID;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
 import com.nesscomputing.httpclient.HttpClient;
 import com.nesscomputing.httpclient.HttpClientRequest;
 import com.nesscomputing.httpclient.HttpClientResponseHandler;
 import com.nesscomputing.httpclient.response.ContentResponseHandler;
 import com.nesscomputing.httpserver.testing.LocalHttpService;
 import com.nesscomputing.logging.Log;
-import com.nesscomputing.testing.lessio.AllowNetworkAccess;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.kitei.testing.lessio.AllowNetworkAccess;
 
 
 @AllowNetworkAccess(endpoints={"127.0.0.1:*"})

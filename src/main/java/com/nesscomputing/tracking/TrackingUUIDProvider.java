@@ -19,6 +19,7 @@ package com.nesscomputing.tracking;
 import java.util.UUID;
 
 import com.google.inject.Inject;
+
 import com.nesscomputing.tracking.adapters.TrackingAdapter;
 import com.nesscomputing.tracking.config.TrackingConfig;
 

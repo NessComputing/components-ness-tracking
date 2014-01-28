@@ -15,14 +15,14 @@
  */
 package com.nesscomputing.tracking.adapters;
 
-import com.nesscomputing.logging.Log;
-import com.nesscomputing.tracking.TrackingFilter;
-
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
 import com.google.inject.Singleton;
+
+import com.nesscomputing.logging.Log;
+import com.nesscomputing.tracking.TrackingFilter;
 
 /**
  * Implements {@link TrackingAdapter} for the Servlet API.

@@ -20,6 +20,7 @@ import java.util.UUID;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+
 import com.nesscomputing.httpclient.HttpClientObserver;
 import com.nesscomputing.httpclient.HttpClientRequest;
 import com.nesscomputing.httpclient.HttpClientRequest.Builder;

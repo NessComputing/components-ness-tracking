@@ -5,40 +5,25 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.nesscomputing</groupId>
-    <artifactId>ness-oss-parent</artifactId>
-    <version>28</version>
+    <artifactId>ness-root</artifactId>
+    <version>1.0-SNAPSHOT</version>
   </parent>
-
-  <scm>
-    <connection>scm:git:git://github.com/NessComputing/components-ness-tracking.git</connection>
-    <developerConnection>scm:git:git@github.com:NessComputing/components-ness-tracking.git</developerConnection>
-    <url>http://github.com/NessComputing/components-ness-tracking</url>
-    <tag>HEAD</tag>
-  </scm>
 
   <groupId>com.nesscomputing.components</groupId>
   <artifactId>ness-tracking</artifactId>
   <name>ness-tracking</name>
-  <version>1.2.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <description>Ness Tracking component. Contains the logic to offer tracing and tracking through the Ness Platform.</description>
-
-  <properties>
-    <ness.dep.jackson.version>2.1.2</ness.dep.jackson.version>
-    <ness.dep.jetty.version>8.1.3.v20120416</ness.dep.jetty.version>
-  </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-logging</artifactId>
-      <version>1.1.1</version>
     </dependency>
 
     <dependency>
       <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-config</artifactId>
-      <version>2.2.0</version>
     </dependency>
 
     <dependency>
@@ -73,7 +58,7 @@
 
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
-      <artifactId>jsr305</artifactId>
+      <artifactId>annotations</artifactId>
     </dependency>
 
     <dependency>
@@ -84,39 +69,28 @@
     <dependency>
       <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-httpclient</artifactId>
-      <version>2.0.0</version>
     </dependency>
 
     <dependency>
       <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-scopes</artifactId>
-      <version>1.0.2</version>
     </dependency>
 
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-http</artifactId>
-      <version>${ness.dep.jetty.version}</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-server</artifactId>
-      <version>${ness.dep.jetty.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.eclipse.jetty.orbit</groupId>
-          <artifactId>javax.servlet</artifactId>
-        </exclusion>
-      </exclusions>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-security</artifactId>
-      <version>${ness.dep.jetty.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -142,23 +116,6 @@
       <groupId>com.nesscomputing.components</groupId>
       <artifactId>ness-httpserver</artifactId>
       <scope>test</scope>
-      <version>2.2.0</version>
     </dependency>
   </dependencies>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.nesscomputing.components</groupId>
-        <artifactId>ness-lifecycle</artifactId>
-        <version>1.3.0</version>
-      </dependency>
-      <dependency>
-        <groupId>com.nesscomputing</groupId>
-        <artifactId>ness-syslog4j</artifactId>
-        <version>0.9.47-NESS-7</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
 </project>

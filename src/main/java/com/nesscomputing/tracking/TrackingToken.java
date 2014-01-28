@@ -17,10 +17,10 @@ package com.nesscomputing.tracking;
 
 import java.util.UUID;
 
-import org.apache.log4j.MDC;
-
 import com.nesscomputing.scopes.threaddelegate.ThreadDelegatedContext.ScopeEvent;
 import com.nesscomputing.scopes.threaddelegate.ThreadDelegatedContext.ScopeListener;
+
+import org.apache.log4j.MDC;
 
 /**
  * Represents the tracking UUID. This object is in the ThreadDelegated scope and will

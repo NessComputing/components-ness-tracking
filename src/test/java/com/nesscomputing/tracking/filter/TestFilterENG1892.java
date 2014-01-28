@@ -26,10 +26,10 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
+import com.nesscomputing.config.Config;
+
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.nesscomputing.config.Config;
 
 /**
  * Tests that for a totally passive (i.e. not creating any token) configuration, no token is created.

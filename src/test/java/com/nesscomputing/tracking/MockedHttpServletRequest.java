@@ -41,19 +41,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
-import org.apache.commons.io.input.NullInputStream;
-
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Maps.EntryTransformer;
 
+import org.apache.commons.io.input.NullInputStream;
+
 public class MockedHttpServletRequest implements HttpServletRequest
 {
-    private Map<String, Object> attributes = Maps.newHashMap();
-    private Map<String, List<String>> parameters = Maps.newHashMap();
-    private Map<String, List<String>> headers = Maps.newHashMap();
+    private final Map<String, Object> attributes = Maps.newHashMap();
+    private final Map<String, List<String>> parameters = Maps.newHashMap();
+    private final Map<String, List<String>> headers = Maps.newHashMap();
 
     public void addHeader(final String name, final String value)
     {
@@ -298,7 +298,7 @@ public class MockedHttpServletRequest implements HttpServletRequest
     public int getIntHeader(String name)
     {
         final String header = getHeader(name);
-        return header == null ? null : Integer.parseInt(header);
+        return header == null ? 0 : Integer.parseInt(header);
     }
 
     @Override

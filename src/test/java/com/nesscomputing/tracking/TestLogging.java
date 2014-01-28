@@ -30,6 +30,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.inject.Module;
+import com.google.inject.servlet.ServletModule;
+
+import com.nesscomputing.log4j.testing.RecordingAppender;
+import com.nesscomputing.logging.Log;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -38,12 +44,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.google.inject.Module;
-import com.google.inject.servlet.ServletModule;
-import com.nesscomputing.log4j.testing.RecordingAppender;
-import com.nesscomputing.logging.Log;
-import com.nesscomputing.tracking.TrackingFilter;
 
 
 public class TestLogging extends AbstractTrackingTestCase

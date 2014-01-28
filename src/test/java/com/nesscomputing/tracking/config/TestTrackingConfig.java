@@ -22,8 +22,6 @@ import org.junit.Test;
 import org.skife.config.ConfigurationObjectFactory;
 import org.skife.config.SimplePropertyConfigSource;
 
-import com.nesscomputing.tracking.config.TrackingConfig;
-
 public class TestTrackingConfig
 {
     @Test

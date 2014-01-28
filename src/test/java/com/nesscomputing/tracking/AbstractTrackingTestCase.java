@@ -18,11 +18,6 @@ package com.nesscomputing.tracking;
 
 import java.net.URI;
 
-import org.easymock.EasyMockSupport;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-
 import com.google.inject.AbstractModule;
 import com.google.inject.Binder;
 import com.google.inject.Guice;
@@ -34,10 +29,15 @@ import com.google.inject.Provider;
 import com.google.inject.Scopes;
 import com.google.inject.Stage;
 import com.google.inject.servlet.GuiceFilter;
+
 import com.nesscomputing.config.Config;
 import com.nesscomputing.scopes.threaddelegate.ThreadDelegatedScopeModule;
-import com.nesscomputing.tracking.TrackingToken;
 import com.nesscomputing.tracking.guice.TrackingModule;
+
+import org.easymock.EasyMockSupport;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
 
 public abstract class AbstractTrackingTestCase
 {

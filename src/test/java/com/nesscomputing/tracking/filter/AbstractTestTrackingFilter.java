@@ -26,15 +26,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.junit.After;
-import org.junit.Before;
-
 import com.google.inject.Inject;
 import com.google.inject.Module;
 import com.google.inject.servlet.ServletModule;
+
 import com.nesscomputing.config.Config;
 import com.nesscomputing.tracking.AbstractTrackingTestCase;
 import com.nesscomputing.tracking.MockedHttpServletRequest;
+
+import org.junit.After;
+import org.junit.Before;
 
 
 public abstract class AbstractTestTrackingFilter extends AbstractTrackingTestCase
